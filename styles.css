@@ -1,0 +1,253 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f4f1e1, #ffffff); /* Cream to white gradient background */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #1D2D50; /* Dark navy background */
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  color: #ECF0F1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #ECF0F1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1ABC9C; /* Light teal */
+  transform: translateY(-3px);
+}
+
+/* Fade-in Animation for Sections */
+section {
+  padding: 60px 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #1D2D50;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #7F8C8D;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #7F8C8D;
+}
+
+strong {
+  color: #1D2D50;
+}
+
+/* Experience Section */
+.experience-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.experience-item {
+  background: linear-gradient(135deg, #ffffff, #f1f1f1); /* Light white to light gray gradient */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item h3 {
+  font-size: 1.6rem;
+  color: #1D2D50; /* Deep navy blue */
+  margin-bottom: 15px;
+}
+
+.experience-item ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.experience-item ul li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #4A4A4A; /* Dark gray */
+  position: relative;
+  padding-left: 25px; /* Space for bullet points */
+}
+
+.experience-item ul li::before {
+  content: '•'; /* Custom bullet point */
+  color: #4DB6AC; /* Soft teal */
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.experience-item ul li:hover {
+  color: #1D2D50; /* Deep navy blue on hover */
+  background-color: #ECF0F1; /* Light background on hover */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.experience-item ul li:hover::before {
+  color: #1ABC9C; /* Darker teal for the bullet on hover */
+}
+
+/* Hobbies & Interests */
+#hobbies {
+  background-color: #ECF0F1;
+}
+
+#hobbies p {
+  font-size: 1.2rem;
+  color: #34495E;
+  text-align: center;
+}
+
+/* Gallery Section */
+#gallery .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.photo-item img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+#gallery h2 {
+  color: #1D2D50;
+}
+
+/* Footer */
+footer {
+  background-color: #1D2D50; /* Dark navy blue */
+  color: #ECF0F1;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #BDC3C7;
+}
+
+footer p a {
+  color: #1ABC9C; /* Teal */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer p a:hover {
+  color: #16A085;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .experience-content {
+    flex-direction: column;
+  }
+
+  .experience-item {
+    width: 100%;
+  }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
