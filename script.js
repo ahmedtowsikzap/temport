@@ -22,12 +22,12 @@ document.getElementById('view-gallery').addEventListener('click', () => {
           break;
         case 'tictactoe':
           gameContainer.innerHTML = `
-            <iframe src="https://codepen.io/your-username/embed/your-pen-id?default-tab=result" width="100%" height="500" frameborder="0"></iframe>
+            <iframe src="https://sethclydesdale.github.io/tic-tac-toe" width="100%" height="500" frameborder="0"></iframe>
           `;
           break;
         case 'memory':
           gameContainer.innerHTML = `
-            <iframe src="https://codepen.io/your-username/embed/your-pen-id?default-tab=result" width="100%" height="500" frameborder="0"></iframe>
+            <iframe src="https://mark-rolich.github.io/MemoryGame.js/" width="100%" height="500" frameborder="0"></iframe>
           `;
           break;
         default:
